@@ -55,7 +55,7 @@ async def doc(bot,update):
      name = new_name.split(":-")
      #Check if the split resulted in at least two elements
      if len(name) < 2:
-        await update.message.edit("Invalid name format.")
+        await update.message.reply_text("Invalid name format.")
         return
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
