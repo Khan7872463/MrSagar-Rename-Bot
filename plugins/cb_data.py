@@ -51,8 +51,12 @@ async def doc(bot,update):
      new_name = update.message.text
      used_ = find_one(update.from_user.id)
      used = used_["used_limit"]
-     date = used_["date"]	
+     date = used_["date"]
      name = new_name.split(":-")
+     print(name)
+     new_filename = name[1]
+	
+     #name = new_name.split(":-")
      #Check if the split resulted in at least two elements
      if len(name) < 2:
         await update.message.reply_text("Invalid name format.")
