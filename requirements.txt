@@ -1,9 +1,9 @@
 Pillow
 humanize
 hachoir
-Pyrogram==2.0.83
+Pyrogram
 TgCrypto
-pymongo==4.0.2
+pymongo
 dnspython
 Flask
 gunicorn
