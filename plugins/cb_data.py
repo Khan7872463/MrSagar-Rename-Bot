@@ -53,6 +53,10 @@ async def doc(bot,update):
      used = used_["used_limit"]
      date = used_["date"]	
      name = new_name.split(":-")
+     #Check if the split resulted in at least two elements
+     if len(name) < 2:
+        await update.message.edit("Invalid name format.")
+        return
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      message = update.message.reply_to_message
