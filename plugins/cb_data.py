@@ -71,7 +71,7 @@ async def doc(bot,update):
      total_used = used + int(file.file_size)
      used_limit(update.from_user.id,total_used)
      try:
-     		path = await bot.download_media(message = file, progress=progress_for_pyrogram,progress_args=( "Trying To Download...",  ms, c_time   ))
+     		path = await bot.download_media(message = file, file_name=file_path, progress=progress_for_pyrogram,progress_args=( "Trying To Download...",  ms, c_time   ))
      		
      except Exception as e:
           neg_used = used - int(file.file_size)
@@ -81,8 +81,8 @@ async def doc(bot,update):
      splitpath = path.split("/downloads/")
      dow_file_name = splitpath[1]
      old_file_name =f"downloads/{dow_file_name}"
-     #os.rename(old_file_name,file_path)
-     os.rename(old_file_name, f"downloads/{new_filename}")
+     os.rename(old_file_name,file_path)
+     #os.rename(old_file_name, f"downloads/{new_filename}")
      user_id = int(update.message.chat.id)
      data = find(user_id)
      try:
