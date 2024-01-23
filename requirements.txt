@@ -7,6 +7,6 @@ pymongo
 dnspython==2.3.0
 Flask
 gunicorn
-aiohttp=3.8.4
+aiohttp==3.8.4
 
  
