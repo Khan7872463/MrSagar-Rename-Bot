@@ -71,7 +71,7 @@ async def doc(bot,update):
      total_used = used + int(file.file_size)
      used_limit(update.from_user.id,total_used)
      try:
-     		path = await bot.download_media(message = file, file_name=file_path, progress=progress_for_pyrogram,progress_args=( "Trying To Download...",  ms, c_time   ))
+     		path = await bot.download_media(message = file, progress=progress_for_pyrogram,progress_args=( "Trying To Download...",  ms, c_time   ))
      		
      except Exception as e:
           neg_used = used - int(file.file_size)
